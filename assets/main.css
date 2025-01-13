@@ -1,0 +1,22 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	@apply text-[18px] scroll-smooth;
+	font-family: Plus Jakarta Sans;
+}
+p{
+	@apply leading-[1.5]
+}
+input{
+	outline: none !important;
+}
+body{
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+.container{
+	@apply max-w-[1500px] sm:px-[2rem] px-[1.5rem] mx-auto
+}
