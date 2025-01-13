@@ -33,8 +33,11 @@
 </template>
 
 <script lang="ts" setup>
-const { data: garantee } = await useFetch(
-	'https://webnights.github.io/apis/HomePro/garantee.json'
+// const { data: garantee } = await useFetch(
+// 	'https://webnights.github.io/apis/HomePro/garantee.json'
+// )
+const { data: garantee } = await useAsyncData('garantee', () =>
+	$fetch('https://webnights.github.io/apis/HomePro/garantee.json')
 )
 </script>
 

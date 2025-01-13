@@ -64,8 +64,11 @@
 
 <script lang="ts" setup>
 import type { HeroData } from '@/types/types' // Импортируем тип
-const { data: advantages } = await useFetch<HeroData>(
-	'https://webnights.github.io/apis/HomePro/'
+// const { data: advantages } = await useFetch<HeroData>(
+// 	'https://webnights.github.io/apis/HomePro/'
+// )
+const { data: advantages } = await useAsyncData<HeroData>('advantages', ()=>
+	$fetch('https://webnights.github.io/apis/HomePro/')
 )
 const isMounted = ref(false)
 onMounted(() => {

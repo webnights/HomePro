@@ -45,7 +45,10 @@
 <script setup lang="ts">
 const currentIndex = ref(0)
 
-const { data: questions } = await useFetch(
-	'https://webnights.github.io/apis/HomePro/FAQ.json'
+// const { data: questions } = await useFetch(
+// 	'https://webnights.github.io/apis/HomePro/FAQ.json'
+// )
+const { data: questions } = await useAsyncData('questions', ()=>
+	$fetch('https://webnights.github.io/apis/HomePro/FAQ.json')
 )
 </script>

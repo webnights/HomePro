@@ -24,5 +24,6 @@
 </template>
 
 <script lang='ts' setup>
-const {data: serviceCards} = await useFetch('https://webnights.github.io/apis/HomePro/services.json');
+const {data: serviceCards} = await useAsyncData('serviceCards', () => $fetch('https://webnights.github.io/apis/HomePro/services.json'));
+// const {data: serviceCards} = await useFetch('https://webnights.github.io/apis/HomePro/services.json');
 </script>
