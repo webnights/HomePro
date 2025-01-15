@@ -48,7 +48,6 @@
 				</div>
 				<div class="relative">
 					<img
-						v-if="isMounted"
 						class="rounded-[24px] min-w-[260px] max-w-[410px] lg:block hidden"
 						src="/images/hero/hero2.jpg"
 						alt=""
@@ -66,10 +65,10 @@
 import type { HeroData } from '@/types/types' // Импортируем тип
 
 const {data: advantages} = useFetch('/api/hero')
-const isMounted = ref(false)
-onMounted(() => {
-	isMounted.value = true
-})
+// const isMounted = ref(false)
+// onMounted(() => {
+// 	isMounted.value = true
+// })
 </script>
 <style scoped>
 .image_overlay {
