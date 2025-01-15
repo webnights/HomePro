@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "serve": "json-server --watch db.json --port 3004"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
@@ -15,6 +16,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/supabase": "^1.4.5",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "json-server": "^1.0.0-beta.3",
     "nuxt": "^3.15.1",
     "vue": "latest",
     "vue-router": "latest"

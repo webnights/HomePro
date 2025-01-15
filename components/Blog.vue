@@ -44,10 +44,8 @@ const hidePartBlog = () =>{
 	blogLength.value = 3;
 	blogToggleWord.value = ('View More')
 }
-// const { data: info } = await useFetch(
-// 	'https://webnights.github.io/apis/HomePro/blog.json'
-// )
-const { data: info } = await useAsyncData('blog', () =>
-	$fetch('https://webnights.github.io/apis/HomePro/blog.json')
+const { data: info } = await useFetch(
+	'/api/blog'
 )
+
 </script>

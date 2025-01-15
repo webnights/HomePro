@@ -55,10 +55,7 @@
 </template>
 
 <script lang="ts" setup>
-const { data: services } = await useAsyncData('services', ()=>
-	$fetch('https://webnights.github.io/apis/HomePro/professional.json')
+const { data: services } = await useFetch(
+	'/api/professional'
 )
-// const { data: services } = await useFetch(
-// 	'https://webnights.github.io/apis/HomePro/professional.json'
-// )
 </script>

@@ -46,6 +46,6 @@
 const currentIndex = ref(0)
 
 const { data: questions } = await useFetch(
-	'https://webnights.github.io/apis/HomePro/FAQ.json'
+	'/api/FAQ'
 )
 </script>

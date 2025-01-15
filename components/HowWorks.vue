@@ -25,6 +25,6 @@
 </template>
 
 <script lang="ts" setup>
-const { data: jobs } = await useAsyncData('jobs', () => $fetch('https://webnights.github.io/apis/HomePro/worker.json'));
-// const { data: jobs } = await useFetch('https://webnights.github.io/apis/HomePro/worker.json');
+
+const { data: jobs } = await useFetch('/api/worker');
 </script>
