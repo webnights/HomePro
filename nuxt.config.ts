@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
-    '@formkit/auto-animate'
+    '@formkit/auto-animate',
   ],
   css:[
     '~/assets/main.css'
