@@ -8,7 +8,7 @@
 				width="430"
 				height="300"
 				format='webp'
-				class="object-cover rounded-[24px] mb-6"
+				class="object-cover w-[430px] h-[300px] rounded-[24px] mb-6"
 				:src="card.image"
 				alt=""
 			/>

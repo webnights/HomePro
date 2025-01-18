@@ -6,7 +6,7 @@
 			width='76'
 			height='76'
 			format='webp'
-			class='object-cover rounded-full' :src="slide.image" alt="" />
+			class='object-fit w-[76px] h-[76px] rounded-full' :src="slide.image" alt="" />
 			<div>
 				<span class='font-black text-[24px] block'>{{ slide.name }}</span>
 				<img src="/images/icons/rate.svg" alt="Рейтинг">
