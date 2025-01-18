@@ -1,3 +1,24 @@
+@font-face {
+	font-family: Plus Jakarta Sans;
+	src: url("/assets/fonts/PlusJakartaSans-Regular.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: Plus Jakarta Sans;
+	src: url("/assets/fonts/PlusJakartaSans-Medium.ttf");
+	font-weight: 500;
+}
+@font-face {
+	font-family: Plus Jakarta Sans;
+	src: url("/assets/fonts/PlusJakartaSans-Bold.ttf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Plus Jakarta Sans;
+	src: url("/assets/fonts/PlusJakartaSans-ExtraBold.ttf");
+	font-weight: 800;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -17,6 +38,7 @@ body {
 	max-width: 100vw;
 	overflow-x: hidden;
 }
+
 .container {
 	@apply max-w-[1500px] sm:px-[2rem] px-[1.5rem] mx-auto;
 }

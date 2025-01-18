@@ -11,12 +11,10 @@
 					:styles = "'text-left text-dark'"
 					/>
 					<ul 
-					
-					v-if="services && services.professional"
 					class='grid sm:grid-cols-2 grid-cols-1 sm:gap-x-[30px] gap-x-[20px] sm:gap-y-[32px] gap-y-[24px]'
 					>
 						<li 
-						v-for="service in services.professional"
+						v-for="service in props.services"
 						class='flex items-center gap-[14px]'
 						>
 							<svg
@@ -55,7 +53,5 @@
 </template>
 
 <script lang="ts" setup>
-const { data: services } = await useFetch(
-	'/api/professional'
-)
+const props = defineProps(['services'])
 </script>

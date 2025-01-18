@@ -9,7 +9,7 @@
 			<div class="flex md:justify-between justify-center items-center gap-6">
 				<div class="relative">
 					<img
-						class="rounded-[24px] min-w-[260px] max-w-[410px] lg:block hidden"
+						class="rounded-[24px] min-w-[260px] max-w-[410px] xl:block hidden"
 						src="/images/hero/hero1.jpg"
 						alt=""
 					/>
@@ -31,11 +31,11 @@
 					 :text="'Need improvement or repair your home? we can help!'"
 					 />
 					<ul
-						v-if="advantages && advantages.hero"
+						v-if="props.advantages"
 						class="flex flex-wrap items-center justify-center xl:gap-x-[64px] gap-x-[20px] gap-y-[20px] xl:mt-[150px] mt-[80px]"
 					>
 						<li
-							v-for="advantage in advantages.hero"
+							v-for="advantage in props.advantages"
 							class="flex items-center gap-4 leading-[130%] max-w-[170px]"
 						>
 							<img :src="advantage.icon" alt="" />
@@ -48,7 +48,7 @@
 				</div>
 				<div class="relative">
 					<img
-						class="rounded-[24px] min-w-[260px] max-w-[410px] lg:block hidden"
+						class="rounded-[24px] min-w-[260px] max-w-[410px] xl:block hidden"
 						src="/images/hero/hero2.jpg"
 						alt=""
 					/>
@@ -62,13 +62,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { HeroData } from '@/types/types' // Импортируем тип
-
-const {data: advantages} = useFetch('/api/hero')
-// const isMounted = ref(false)
-// onMounted(() => {
-// 	isMounted.value = true
-// })
+const props = defineProps(['advantages']);
 </script>
 <style scoped>
 .image_overlay {

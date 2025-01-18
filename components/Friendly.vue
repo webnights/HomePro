@@ -19,10 +19,9 @@
 					</div>
 
 					<div
-						v-if="garantee && garantee.friendly"
 						class="flex flex-wrap gap-y-[60px] justify-between sm:pt-[60px] pt-[30px]"
 					>
-						<div v-for="(garanteeItem, index) in garantee.friendly">
+						<div v-for="(garanteeItem, index) in props.friendly">
 							<GaranteeCard :card="garanteeItem" :key="index" />
 						</div>
 					</div>
@@ -33,9 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-const { data: garantee } = await useFetch(
-	'/api/garantee'
-)
+const props = defineProps(['friendly']);
 
 </script>
 

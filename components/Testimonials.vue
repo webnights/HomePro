@@ -7,13 +7,15 @@
 				:styles="'sm:mb-[70px] mb-[40px] text-center mx-auto max-w-[800px]'"
 				/>
 				<img class='mx-auto mb-8' src="/images/icons/trustpilot.svg" alt="Трастпайлот">
-				<Slider/>
+				<Slider
+				:testimonials = 'props.testimonials'
+				/>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script lang='ts' setup >
-
+const props = defineProps(['testimonials']);
 </script>
 

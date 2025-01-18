@@ -8,9 +8,9 @@
 				:text="'max-w-[500px] mx-auto'"
 			/>
 
-			<div v-auto-animate v-if="info && info.blog" class="flex flex-wrap gap-2 sm:justify-between justify-center">
+			<div class="flex flex-wrap gap-2 sm:justify-between justify-center">
 				<BlogCard
-					v-for="(card, index) in info.blog.slice(0, blogLength)"
+					v-for="(card, index) in props.blog.slice(0, blogLength)"
 					:card="card"
 					:key="index"
 				/>
@@ -44,8 +44,6 @@ const hidePartBlog = () =>{
 	blogLength.value = 3;
 	blogToggleWord.value = ('View More')
 }
-const { data: info } = await useFetch(
-	'/api/blog'
-)
-
+const props = defineProps(['blog'])
+console.log(props.blog)
 </script>

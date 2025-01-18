@@ -13,8 +13,8 @@
 						:title="'How HomePro works?'"
 						:styles="'text-dark text-left sm:mb-[60px] mb-[24px]'"
 					/>
-					<ul class='flex flex-col gap-[40px]' v-if="jobs && jobs.worker">
-						<li v-for="(job, index) in jobs.worker" :key="index">
+					<ul class='flex flex-col gap-[40px]'>
+						<li v-for="(job, index) in props.works" :key="index">
 							<WorkerRaw :job="job" :id="index" />
 						</li>
 					</ul>
@@ -25,6 +25,5 @@
 </template>
 
 <script lang="ts" setup>
-
-const { data: jobs } = await useFetch('/api/worker');
+const props = defineProps(['works'])
 </script>

@@ -8,7 +8,7 @@
 					:styles="'text-left'"
 				/>
 
-				<ul class="max-w-[840px]" v-if="questions && questions.FAQ">
+				<ul class="max-w-[840px]">
 					<li
 						v-auto-animate
 						@click="currentIndex = index"
@@ -16,7 +16,7 @@
 							'flex flex-col gap-4 py-6 px-8 rounded-[24px]',
 							currentIndex === index ? 'bg-gray-light' : '',
 						]"
-						v-for="(item, index) in questions.FAQ"
+						v-for="(item, index) in props.FAQ"
 						:key="index"
 					>
 						<div class="flex justify-between">
@@ -45,7 +45,5 @@
 <script setup lang="ts">
 const currentIndex = ref(0)
 
-const { data: questions } = await useFetch(
-	'/api/FAQ'
-)
+const props =  defineProps(['FAQ'])
 </script>

@@ -9,10 +9,9 @@
 				/>
 				<div
 				 class='flex flex-wrap sm:mt-[95px] mt-[40px] sm:justify-between justify-center sm:gap-y-[64px] gap-y-8'
-				 v-if='serviceCards && serviceCards.services'
 				 >
 					<ServicesCard
-					v-for='(card, index) in serviceCards.services'
+					v-for='(card, index) in props.services'
 					:key='index'
 					:card = 'card'
 					/>
@@ -24,6 +23,5 @@
 </template>
 
 <script lang='ts' setup>
-
-const {data: serviceCards} = await useFetch('/api/services');
+const props = defineProps(['services']);
 </script>
